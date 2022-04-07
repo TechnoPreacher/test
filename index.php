@@ -1,5 +1,5 @@
 <?php
 echo 'hi </br>';
-echo 'that is index.php which change in second commit and throw conflict...';
-
+echo 'second change of index.php in master branch </br>';
+echo 'some additiona text...';
 
