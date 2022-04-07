@@ -1,5 +1,5 @@
 <?php
 echo 'hi </br>';
-echo 'that is index.php which been in first commit';
+echo 'that is index.php which change in second commit and throw conflict...';
 
 
