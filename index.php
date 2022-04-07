@@ -1,5 +1,6 @@
 <?php
 echo 'hi </br>';
-echo 'that is index.php which change in second commit and throw conflict...';
+echo 'some another text for second commit in feature branch </br>';
+echo 'change in feature branch';
 
 
