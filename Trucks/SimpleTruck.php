@@ -1,7 +1,5 @@
 <?php
 
-include_once "SuperTruck.php";
-
 class simpleTruck extends SuperTruck
 {
 

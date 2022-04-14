@@ -1,11 +1,18 @@
 <?php
-include_once "MovableInterface.php";
-
 
 abstract class SuperTruck implements MovableInterface
 {
     protected int $maxSpeed;
     protected int $speed=0;
+    public static string $country;
+
+    /**
+     * @param mixed $country
+     */
+   public static function setCountry(string $country): void
+    {
+        self::$country = $country;
+    }
 
     public function __construct(int $maxSpeed)
     {

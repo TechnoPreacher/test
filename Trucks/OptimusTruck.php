@@ -1,8 +1,11 @@
 <?php
-include_once "SuperTruck.php";
 
 class OptimusTruck extends SuperTruck
 {
+
+    const ENGINE_TYPE="transformer";
+
+
     private function optimusMessage()
     {
         echo "OPTIMUS: I'm Optimus Prime! You shall not past!!!" . PHP_EOL;
