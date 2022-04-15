@@ -1,12 +1,14 @@
 <?php
 
+namespace Cars;
+
+use Interfaces\MovableInterface;
 
 class Car implements MovableInterface
 {
 
     protected int $maxSpeed;//максимальная скорость
     protected int $speed;//текущая скорость
-
 
     public function __construct(int $maximum)
     {
@@ -57,5 +59,4 @@ class Car implements MovableInterface
             $this->speed = $unit;
         }
     }
-
 }

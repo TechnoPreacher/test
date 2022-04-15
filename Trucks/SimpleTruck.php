@@ -1,5 +1,7 @@
 <?php
 
+namespace Trucks;
+
 class simpleTruck extends SuperTruck
 {
 
