@@ -9,12 +9,41 @@ class Car implements MovableInterface
 
     protected int $maxSpeed;//максимальная скорость
     protected int $speed;//текущая скорость
+    protected string $brand;//марка машины
+    protected $engine;//двигатель для агрегации
+    protected  $police;//протокол о штрафах для композиции!
 
-    public function __construct(int $maximum)
+    public function __destruct()
+    {
+        echo $this->brand . " is die!" . PHP_EOL;
+        $this->engine->setSet(false);
+    }
+
+    public function __construct(string $brand, int $maximum, Engine $motor)
     {
         $this->maxSpeed = $maximum;
-        echo "CAR: new car is born with max speed $maximum " . "current speed is zero" . PHP_EOL;
+        $this->brand = $brand;
+        echo "CAR: new $brand car is born with max speed $maximum; " . "current speed is zero" . PHP_EOL;
         $this->speed = 0;
+        $this->engine =$motor;
+        $this->engine->setSet(true);//"установка двигателся в машину"
+        $this->police = new Police(date("l jS \of F Y h:i:s A"),$motor->getVolume(),$brand);
+    }
+
+
+    public function getPolice(): Police
+    {
+        return $this->police;
+    }
+
+    public function getBrand(): string
+    {
+        return $this->brand;
+    }
+
+    public function getEngine(): Engine
+    {
+        return $this->engine;
     }
 
     public function getSpeed(): int
