@@ -1,0 +1,19 @@
+{
+    "name": "ns/test.local",
+    "description": "homework for composer's demonstration",
+    "type": "project",
+    "license": "GNU",
+    "autoload": {
+        "psr-4": {
+            "Ns\\TestLocal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "TechnoPreacher",
+            "email": "nik.nik.sulima@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {"guzzlehttp/guzzle": "^7.4"}
+}
