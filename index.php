@@ -2,11 +2,12 @@
 
 require 'vendor/autoload.php';
 
+use nsfin\Exchange;
 //использование пространств имён
-use GuzzleHttp\Client;
 
+$Exchange = new Exchange();
+echo "If i wanna buy 10 dollars, i should pay ";
+echo $Exchange->convert("buy 10 USD");
 
-
-$client = new Client();
-$response = $client->get('https://ithillel.ua/ua');
-echo $response->getBody()->getContents();
+echo "If i wanna sale 10 dollars, i take ";
+echo $Exchange->convert("sale 10 USD");
